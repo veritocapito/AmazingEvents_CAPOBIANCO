@@ -4,3 +4,7 @@
     box-sizing: border-box;
 }
 
+.card-footer{
+    justify-content: space-between;
+    align-items: baseline;
+}
