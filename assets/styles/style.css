@@ -4,7 +4,17 @@
     box-sizing: border-box;
 }
 
+
+
+.card{
+    height: 400px;
+}
+
 .card-footer{
     justify-content: space-between;
     align-items: baseline;
+}
+
+.btn-danger{
+    box-shadow: -4px -4px #b4aeae;
 }
