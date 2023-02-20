@@ -4,11 +4,23 @@
     box-sizing: border-box;
 }
 
-
+main{
+    background-color: rgb(252, 202, 223);
+}
 
 .card{
-    height: 400px;
+    height: 360px;
+    width: 280px;
+    box-shadow: 4px 4px #e2dcdc;
 }
+
+.card-img{
+    width: 280px;
+	height: 150px;
+	object-fit: cover;
+    align-self: center;
+}
+
 
 .card-footer{
     justify-content: space-between;
@@ -16,5 +28,5 @@
 }
 
 .btn-danger{
-    box-shadow: -4px -4px #b4aeae;
+    box-shadow: -4px -4px #e2dcdc;
 }
