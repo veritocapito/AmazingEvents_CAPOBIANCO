@@ -4,14 +4,19 @@
     box-sizing: border-box;
 }
 
+input[type="checkbox"]{
+    border: none;
+}
+
 main{
     background-color: rgb(252, 202, 223);
+    padding-bottom: 1rem;
 }
 
 .card{
     height: 360px;
     width: 280px;
-    box-shadow: 4px 4px #e2dcdc;
+    box-shadow: 4px 4px #9e9e9e;
 }
 
 .card-img{
@@ -27,6 +32,16 @@ main{
     align-items: baseline;
 }
 
-.btn-danger{
-    box-shadow: -4px -4px #e2dcdc;
+.btn-book{
+    box-shadow: -4px -4px #9e9e9e;
+    background-color: rgb(194,9,97);
+    color: #e2dcdc;
+}
+
+a .bi:hover{
+    color: #e2dcdc;
+}
+
+footer{
+    height: 10.5vh;
 }
