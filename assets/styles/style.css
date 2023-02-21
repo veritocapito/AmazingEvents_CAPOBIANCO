@@ -38,8 +38,57 @@ main{
     color: #e2dcdc;
 }
 
+.btn-book:hover{
+    background-color: rgb(239, 131, 184);
+    color: white;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 73vh;
+}
+
+.contact {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: rgb(239, 131, 184);
+}
+
+.btn-submit{
+    background-color: rgb(194,9,97);
+    color: #e2dcdc;
+    width: 8vw;
+    align-self: flex-end;
+}
+
+.btn-submit:hover{
+    background-color: #e2dcdc;
+}
+
 a .bi:hover{
     color: #e2dcdc;
+}
+
+.stats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 70vh;
+    padding-top: 1.8rem;
+    gap: 1rem;
+}
+
+.table {
+    width: 60vw;
+    padding: 2rem;
+    background-color: #e2dcdc;
+    ;
 }
 
 footer{
