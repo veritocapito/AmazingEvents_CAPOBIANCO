@@ -15,7 +15,7 @@
     <body>
         <header>
             <nav class="navbar navbar-dark navbar-expand-lg bg-dark bg-gradient text-light ">
-                <div class="container-fluid col-xl-8">
+                <div class="container-fluid col-xl-9">
                     <a class="navbar-brand d-block" href="../index.html"><img src="../assets/img/Logo Amazing Events.png" alt="logo"
                             width="100"></a>
                     <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
@@ -77,32 +77,44 @@
                 </button>
             </div>
         </header>
-        <main class="">
-            <nav class="navbar bg-secondary bg-gradient bg-opacity-75">
-                <div class="container col-xl-8">
-                    <form class="col p-1 d-flex justify-content-center " role="search">
-                        <div class="row gap-3">
-                            <div class="col d-flex gap-2 p-1">
-                                <input type="checkbox" name="category1" id="category1">
-                                <label for="category1" class="text-light">Category1</label>
-                                <input type="checkbox" name="category2" id="category2">
-                                <label for="category2" class="text-light">Category2</label>
-                                <input type="checkbox" name="category3" id="category3">
-                                <label for="category3" class="text-light">Category3</label>
-                                <input type="checkbox" name="category4" id="category4">
-                                <label for="category4" class="text-light">Category4</label>
-                                <input type="checkbox" name="category5" id="category5">
-                                <label for="category5" class="text-light">Category5</label>
-                            </div>
-                            <div class="col d-flex justify-self-end">
-                                <input class="form-control me-2 w-75" type="search" placeholder="Search"
-                                    aria-label="Search">
-                                <button class="btn btn-outline-light" type="submit">Search</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </nav>
+        <main>
+            <div class="container-fluid d-flex justify-content-center bg-secondary bg-gradient bg-opacity-75">
+                <nav class="navbar navbar-expand-lg">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSearchDropdown" aria-controls="navbarSearchDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                    <div class="collapse navbar-collapse gap-3 p-1" id="navbarSearchDropdown">
+                        <form class="navbar-nav me-auto gap-3" role="search">
+                            <label class="text-light search">
+                                <input type="checkbox" name="category1" value="category1">
+                                Category1
+                            </label>
+                            <label class="text-light search">
+                                <input type="checkbox" name="category2" value="category2">
+                                Category2
+                            </label>
+                            <label class="text-light search">
+                                <input type="checkbox" name="category3" value="category3">
+                                Category3
+                            </label>
+                            <label class="text-light search">
+                                <input type="checkbox" name="category4" value="category4">
+                                Category4
+                            </label>
+                            <label class="text-light search">
+                                <input type="checkbox" name="category5" value="category5">
+                                Category5
+                            </label>
+    
+                            <input class="form-control align-self-center" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <button class="btn btn-outline-light align-self-center" type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
             <div class="container d-flex flex-wrap mt-4 mb-4 justify-content-center">
 
                 <!-- <div class="card m-3" style="width: 18rem;">

@@ -44,47 +44,70 @@
                     </div>
                 </div>
             </nav>
-            <div id="carousel" class="carousel slide">
-                <div class="carousel-inner">
-                    <div class="carousel-item bg-gradient bg-secondary">
-                        <h1 class="m-1 p-1  text-light text-center">Upcoming Events</h1>
-                    </div>
-                    <div class="carousel-item bg-gradient bg-secondary">
-                        <h2 class="m-1 p-1 fs-1 text-light text-center">Past Events</h2>
-                    </div>
-                    <div class="carousel-item active bg-gradient bg-secondary">
-                        <h2 class="m-1 p-1 fs-1 text-light text-center">Contact</h2>
-                    </div>
-                    <div class="carousel-item bg-gradient bg-secondary">
-                        <h2 class="m-1 p-1 fs-1 text-light text-center">Stats</h2>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+
+            <div class="col bg-gradient bg-secondary">
+                <h1 class="p-2 m-0 text-light text-center">Details</h1>
             </div>
+
         </header>
-        <main class="form">
-            <form action="" method="" class="contact gap-2">
-                <div class="mb-3">
-                    <label for="FormControlInput1" class="form-label">Name:</label>
-                    <input type="text" class="form-control" id="FormControlInput1" placeholder="John Doe">
+
+        <main class="details">
+
+            <div class="card mb-3" style="width: 60vw; height: 50vh;">
+                <div class="row g-3">
+                    <div class="col col-md-4">
+                        <img src="..." class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col col-md-8">
+                        <div class="card-body">
+                            <table class="table table-striped datatable table-hover">
+                                <thead class="text-center">
+                                    <tr class="fs-5 text-primary">
+                                        <th scope="col" colspan="2">Data</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Name</th>
+                                        <td>...</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Date</th>
+                                        <td>...</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Description</th>
+                                        <td>...</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Category</th>
+                                        <td>...</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Place</th>
+                                        <td>...</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Capacity</th>
+                                        <td>...</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Assistance or Estimate</th>
+                                        <td>...</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Price</th>
+                                        <td>...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="FormControlInput2" class="form-label">Email:</label>
-                    <input type="email" class="form-control" id="FormControlInput2" placeholder="name@mail.com">
-                </div>
-                <div class="mb-3">
-                    <label for="FormControlTextarea1" class="form-label">Message:</label>
-                    <textarea class="form-control" id="FormControlTextarea1" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-submit">Submit</button>
-            </form>
+            </div>
+
+
+
         </main>
 
         <footer class="d-flex flex-wrap justify-content-between bg-secondary bg-opacity-50 bg-gradient align-items-center py-4 px-2 border-top">

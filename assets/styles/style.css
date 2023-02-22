@@ -4,9 +4,13 @@
     box-sizing: border-box;
 }
 
-input[type="checkbox"]{
-    border: none;
+label.search{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    justify-content: center;
 }
+
 
 main{
     background-color: rgb(252, 202, 223);
@@ -80,7 +84,7 @@ a .bi:hover{
     align-items: center;
     flex-direction: column;
     min-height: 70vh;
-    padding-top: 1.8rem;
+    padding-top: 2rem;
     gap: 1rem;
 }
 
@@ -88,7 +92,27 @@ a .bi:hover{
     width: 60vw;
     padding: 2rem;
     background-color: #e2dcdc;
-    ;
+    table-layout: auto;
+}
+
+.details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 73vh;
+    padding-top: 2rem;
+}
+
+.datatable {
+    width: 30vw;
+    padding: 2rem;
+    background-color: #e2dcdc;
+    table-layout: auto;
+    margin: 2rem;
+}
+
+th.title{
+    background-color:rgb(239, 131, 184) ;
 }
 
 footer{
