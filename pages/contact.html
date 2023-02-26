@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,9 +10,9 @@
         <link rel="stylesheet" href="../assets/styles/style.css">
         <title>Amazing Events | Contact</title>
     </head>
-
     <body>
         <header>
+            <!-- barra de navegacion -->
             <nav class="navbar navbar-dark navbar-expand-lg bg-dark bg-gradient text-light ">
                 <div class="container-fluid col-xl-9">
                     <a class="navbar-brand d-block" href="../index.html"><img src="../assets/img/Logo Amazing Events.png" alt="logo"
@@ -44,58 +43,41 @@
                     </div>
                 </div>
             </nav>
-            <div id="carousel" class="carousel slide">
-                <div class="carousel-inner">
-                    <div class="carousel-item bg-gradient bg-secondary">
-                        <h2 class="m-1 p-1 fs-1 text-light text-center">Home</h2>
-                        <!-- <img src="../assets/img/start.jpg" class="d-block w-100" alt="home"> -->
-                    </div>
-                    <div class="carousel-item bg-gradient bg-secondary">
-                        <h2 class="m-1 p-1 fs-1 text-light text-center">Upcoming Events</h2>
-                            <!-- <img src="../assets/img/ticket.jpg" class="d-block w-100" alt="upcoming_events"> -->
-                    </div>
-                    <div class="carousel-item bg-gradient bg-secondary">
-                        <h2 class="m-1 p-1 fs-1 text-light text-center">Past Events</h2>
-                        <!-- <img src="../assets/img/event.jpg" class="d-block w-100" alt="past_events"> -->
-                    </div>
-                    <div class="carousel-item active bg-gradient bg-secondary">
-                        <h1 class="m-1 p-1 text-light text-center">Contact</h1>
-                        <!-- <img src="../assets/img/mail12.jpg" class="d-block w-100" alt="contact"> -->
-                    </div>
-                    <div class="carousel-item bg-gradient bg-secondary">
-                        <h2 class="m-1 p-1 fs-1 text-light text-center">Stats</h2>
-                        <!-- <img src="../assets/img/stock.jpg" class="d-block w-100" alt="stats"> -->
-                    </div>
+            <!-- slider -->
+            <div class="container-fluid bg-gradient bg-secondary d-flex justify-content-around">
+                <a href="./past.html" class="navigation navbar-brand text-end"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                </svg></a>
+                <div class="navbar-nav slider text-light slider">
+                    <h1 class="m-1 p-1 text-light text-center">Contact</h1>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <a href="./stats.html" class="navigation navbar-brand"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg></a>
             </div>
         </header>
         <main class="form">
-            <form action="" method="" class="contact gap-2">
-                <div class="mb-3">
-                    <label for="FormControlInput1" class="form-label">Name:</label>
-                    <input type="text" class="form-control" id="FormControlInput1" placeholder="John Doe">
-                </div>
-                <div class="mb-3">
-                    <label for="FormControlInput2" class="form-label">Email:</label>
-                    <input type="email" class="form-control" id="FormControlInput2" placeholder="name@mail.com">
-                </div>
-                <div class="mb-3">
-                    <label for="FormControlTextarea1" class="form-label">Message:</label>
-                    <textarea class="form-control" id="FormControlTextarea1" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-submit">Submit</button>
-            </form>
+            <!-- main Contact -->
+            <div class="container col-sm-7 col-md-6 col-lg-5 col-xl-4">
+                <form action="" method="" class="contact gap-2">
+                    <div class="mb-3">
+                        <label for="FormControlInput1" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="FormControlInput1" placeholder="John Doe">
+                    </div>
+                    <div class="mb-3">
+                        <label for="FormControlInput2" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="FormControlInput2" placeholder="name@mail.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="FormControlTextarea1" class="form-label">Message:</label>
+                        <textarea class="form-control" id="FormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Submit</button>
+                </form>
+            </div>            
         </main>
-
         <footer class="d-flex flex-wrap justify-content-between bg-secondary bg-opacity-50 bg-gradient align-items-center py-4 px-2 border-top">
+            <!-- nav de redes -->
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
                 <li class="ms-3"><a class="text-dark mx-1" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20"
                             height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -117,11 +99,8 @@
                 <span class="mb-0 mb-md-0 text-dark">© 2023 FE11-TM</span>
             </div>
         </footer>
-
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"></script>
     </body>
-
 </html>
