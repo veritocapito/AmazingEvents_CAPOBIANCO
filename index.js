@@ -10,7 +10,7 @@ for (let evento of data.events){
     div.className='card m-3';
     div.style='width: 18rem;';
     div.innerHTML=`        
-        <img src="${evento.image}" class="card-img-top card-img" alt="Cinema">
+        <img src="${evento.image}" class="card-img-top card-img" alt="card-image">
         <div class="card-body">
             <h5 class="card-title">${evento.name}</h5>
             <p class="card-text">${evento.description}</p>

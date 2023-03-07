@@ -1,3 +1,3 @@
-import data from "./amazing";
+import data from "./amazing.js";
 
 console.log(data);
