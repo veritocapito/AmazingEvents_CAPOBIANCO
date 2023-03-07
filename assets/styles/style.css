@@ -95,8 +95,7 @@ a .bi:hover{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 1.9rem;
-    min-height: 70vh;
+    min-height: 72.5vh;
     gap: 1rem;
 }
 
