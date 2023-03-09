@@ -1,4 +1,3 @@
-import data from "./amazing.js";
 
 export function createCards(array, container) {
     let fragmento = document.createDocumentFragment();
@@ -24,7 +23,24 @@ export function createCards(array, container) {
 
 }
 
-export function searchPast(){
+
+function searchFuture(myData){
+    let nextEventAux = [];
+    nextEventAux = myData.events.filter( item => Date.parse(item.date) > Date.parse(myData.currentDate));
+    return nextEventAux;
+}
+
+function searchPast(myData){
+    let pastEventAux = [];
+    pastEventAux = myData.events.filter( item => Date.parse(item.date) < Date.parse(myData.currentDate));
+    return pastEventAux;
+}
+
+export { searchFuture, searchPast };
+
+
+
+/*export function searchPast(){
     let pastEventAux = [];
     for (let i = 0; i < data.events.length; i++) {
         if(data.events[i].date < data.currentDate){
@@ -42,5 +58,16 @@ export function searchFuture(){
         }
     }
     return nextEventAux;
-}
+}*/
 
+/* Alternativa sin usar funciones de Array como filter
+function upcEvArray(events) {
+    let upcEv = [];
+    for (let event of events) {
+        if (Date.parse(event.date) > Date.parse(date)) {
+            upcEv.push(event);
+        }
+    }
+    return upcEv;
+}
+*/
