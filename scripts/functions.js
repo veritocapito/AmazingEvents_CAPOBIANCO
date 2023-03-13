@@ -13,7 +13,7 @@ export function createCards(array, container) {
             </div>
             <div class="card-footer d-flex gap-3">
                 <p class="card-text mt-2 pt-1">Price $${item.price}.-</p>
-                <a href="./details.html" class="btn btn-book pt-2">Book Now!</a>
+                <a href="../pages/details.html?id=${item._id}" class="btn btn-book pt-2">More Info</a>
             </div>
         `;
         fragmento.appendChild(div);
