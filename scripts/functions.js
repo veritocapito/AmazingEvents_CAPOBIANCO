@@ -1,5 +1,10 @@
 
 export function createCards(array, container) {
+    container.innerHTML = '';
+    if (array.length == 0){
+        container.innerHTML = `<p class="display-6 fw-bolder" style="padding: 2rem; height: 54vh">No matches found, try again!</p>`
+        return;
+    }
     let fragmento = document.createDocumentFragment();
     for (let item of array){
         let div = document.createElement('div');
@@ -17,26 +22,60 @@ export function createCards(array, container) {
             </div>
         `;
         fragmento.appendChild(div);
-    }
-    
+    }    
     container.appendChild(fragmento);
-
 }
 
+export function createCheckbox(array, container){
+    let categories = array.map(item => item.category);
+    let categoriesCount = new Set(categories);
+    let categoriesArray = Array.from(categoriesCount);
+    let checkboxes = '';
+    categoriesArray.forEach(item => {
+        checkboxes += `
+        <label class="text-light search">
+        <input type="checkbox" name="${item.toLowerCase()}" value="${item.toLowerCase()}"
+        id="${item.toLowerCase()}">${item}</label>`
+    })
+    container.innerHTML = checkboxes;
+}
 
-function searchFuture(myData){
+export function inputFilter(array, text){
+    let arrayAux = array.filter(item => item.name.toLowerCase().
+    includes(text.toLowerCase().trim()));
+/*     if (arrayAux.length > 0 ){
+        return arrayAux;
+    } */
+    return arrayAux;
+}
+
+export function categoryFilter(array){
+    let checkboxesCaptured = document.querySelectorAll('input[type="checkbox"]');
+    let checkboxesArray = Array.from(checkboxesCaptured);
+    let checkboxesChecked = checkboxesArray.filter( item => item.checked);
+    //console.log(checkboxesChecked);
+    let checkboxesMaped = checkboxesChecked.map( item => item.value);
+    console.log(checkboxesMaped);
+
+    if (checkboxesChecked.length > 0 ){
+        let filteredCategories = array.filter( item => checkboxesMaped.includes(item.category.toLowerCase()));
+        return filteredCategories;
+    } 
+    return array;
+}
+
+export function searchFuture(myData){
     let nextEventAux = [];
     nextEventAux = myData.events.filter( item => Date.parse(item.date) > Date.parse(myData.currentDate));
     return nextEventAux;
 }
 
-function searchPast(myData){
+export function searchPast(myData){
     let pastEventAux = [];
     pastEventAux = myData.events.filter( item => Date.parse(item.date) < Date.parse(myData.currentDate));
     return pastEventAux;
 }
 
-export { searchFuture, searchPast };
 
 
 

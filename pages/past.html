@@ -58,42 +58,20 @@
         </header>
         <main>
             <!-- barra de busqueda -->
-            <div class="container-fluid d-flex justify-content-center bg-secondary bg-gradient bg-opacity-75">
-                <nav class="navbar navbar-expand-lg">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearchDropdown"
+            <div class="navbar navbar-expand-lg container-fluid bg-secondary bg-gradient bg-opacity-75">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearchDropdown"
                     aria-controls="navbarSearchDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="btn text-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                     </svg></span>
-                    </button>
-                    <div class="collapse navbar-collapse gap-3 p-1" id="navbarSearchDropdown">
-                        <form class="navbar-nav me-auto gap-3" role="search">
-                            <label class="text-light search">
-                                <input type="checkbox" name="category1" value="category1">
-                                Category1
-                            </label>
-                            <label class="text-light search">
-                                <input type="checkbox" name="category2" value="category2">
-                                Category2
-                            </label>
-                            <label class="text-light search">
-                                <input type="checkbox" name="category3" value="category3">
-                                Category3
-                            </label>
-                            <label class="text-light search">
-                                <input type="checkbox" name="category4" value="category4">
-                                Category4
-                            </label>
-                            <label class="text-light search">
-                                <input type="checkbox" name="category5" value="category5">
-                                Category5
-                            </label>    
-                            <input class="form-control align-self-center" type="search" placeholder="Search"
-                                aria-label="Search">
-                            <button class="btn btn-outline-light align-self-center" type="submit">Search</button>
-                        </form>
-                    </div>
-                </nav>
+                </button>
+                <div class="collapse navbar-collapse form-search gap-3" id="navbarSearchDropdown">
+                    <form class="navbar-nav  gap-3" role="search" id="checkContainer">
+        
+                    </form>
+                    <input class="form-control input-search align-self-end" type="search" placeholder="Search" aria-label="Search" id="card-search">
+                    <!-- <button class="btn btn-outline-light" type="submit" id="search">Search</button> -->
+                </div>
             </div>
             <!-- main Past Events -->
             <div class="container d-flex flex-wrap mt-4 mb-4 justify-content-center" id="cards-past">

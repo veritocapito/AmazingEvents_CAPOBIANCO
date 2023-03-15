@@ -15,13 +15,22 @@
     width: 50vw;
 }
 
-label.search{
+.search{
     display: flex;
+    font-size: small;
     gap: 0.5rem;
-    margin-top: 0.5rem;
+    align-items: center;
+}
+
+.form-search{
+    display: flex;
+    text-align: center;
     justify-content: center;
 }
 
+.input-search{
+    width: 15%;
+}
 
 main{
     background-color: rgb(252, 202, 223);
