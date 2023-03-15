@@ -57,7 +57,7 @@ div.innerHTML = `
             </tbody>
             <tfoot>
                 <th scope="col" colspan="2" class="text-center">
-                <a href="../index.html" class="btn nav-link" >go back</a></th>
+                <a href="javascript:history.back()" class="btn nav-link" >go back</a></th>
             </tfoot>
         </table>
     </div>
