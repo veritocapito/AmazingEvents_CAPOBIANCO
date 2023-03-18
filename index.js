@@ -1,4 +1,3 @@
-import data from "./scripts/amazing.js";
 import { createCards, createCheckbox, inputFilter, categoryFilter } from "./scripts/functions.js";
 
 
@@ -13,12 +12,30 @@ searchInput.addEventListener('input', superFilter);
 searchContainer.addEventListener('change', superFilter);
 
 
+async function requestCards(){
+    let data = await fetch("./assets/amazing.json")
+                    .then(response => response.json())
+                    .then(data => {
+                        return data;
+                    })
+                    .catch((error) => console.log(error));
+                    console.log(data)
+    return data;
+
+}
+
+const data = await requestCards();
+function start(){
+    createCards(data.events, eventsHome);
+    createCheckbox(data.events, catContainer);
+}
+
+start()
+
+
 function superFilter(){
     let firstFilter = inputFilter(data.events, searchInput.value);
     let secondFilter = categoryFilter(firstFilter);
     createCards(secondFilter, eventsHome);
 }
 
-
-createCards(data.events, eventsHome)
-createCheckbox(data.events, catContainer)

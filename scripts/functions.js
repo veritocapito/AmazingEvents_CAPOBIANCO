@@ -1,4 +1,5 @@
 
+
 export function createCards(array, container) {
     container.innerHTML = '';
     if (array.length == 0){
@@ -43,9 +44,6 @@ export function createCheckbox(array, container){
 export function inputFilter(array, text){
     let arrayAux = array.filter(item => item.name.toLowerCase().
     includes(text.toLowerCase().trim()));
-/*     if (arrayAux.length > 0 ){
-        return arrayAux;
-    } */
     return arrayAux;
 }
 
@@ -76,37 +74,3 @@ export function searchPast(myData){
     return pastEventAux;
 }
 
-
-
-
-/*export function searchPast(){
-    let pastEventAux = [];
-    for (let i = 0; i < data.events.length; i++) {
-        if(data.events[i].date < data.currentDate){
-            pastEventAux.push(data.events[i]);
-        }
-    }
-    return pastEventAux;
-}
-
-export function searchFuture(){
-    let nextEventAux = [];
-    for (let i = 0; i < data.events.length; i++) {
-        if(data.events[i].date > data.currentDate){
-            nextEventAux.push(data.events[i]);
-        }
-    }
-    return nextEventAux;
-}*/
-
-/* Alternativa sin usar funciones de Array como filter
-function upcEvArray(events) {
-    let upcEv = [];
-    for (let event of events) {
-        if (Date.parse(event.date) > Date.parse(date)) {
-            upcEv.push(event);
-        }
-    }
-    return upcEv;
-}
-*/
