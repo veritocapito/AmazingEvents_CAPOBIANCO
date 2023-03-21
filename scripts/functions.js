@@ -1,4 +1,14 @@
+export async function requestData(){
+    let data = await fetch("../assets/amazing.json")
+                    .then(response => response.json())
+                    .then(data => {
+                        return data;
+                    })
+                    .catch((error) => console.log(error));
+                    console.log(data)
+    return data;
 
+}
 
 export function createCards(array, container) {
     container.innerHTML = '';

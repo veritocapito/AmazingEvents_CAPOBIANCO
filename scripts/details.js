@@ -1,18 +1,21 @@
-import data from "./amazing.js";
 
-console.log(document);
+import { requestData } from "./functions.js";
 
-const queryString = location.search;
-const params = new URLSearchParams(queryString);
-const id = params.get('id');
+const {currentDate, events} = await requestData();
 
-const event = data.events.find(item => item._id == id);
+function start(){
+    const queryString = location.search;
+    const params = new URLSearchParams(queryString);
+    const id = params.get('id');
+    
+    const data = events.find(item => item._id == id);
 
+    
 let div = document.querySelector('.container')
 div.innerHTML = `
 <div class="row gap-2 d-flex flex-wrap justify-content-around">
     <div class="col-xs-12 col-md-5 align-self-center">
-        <img src="${event.image}" class="img-data rounded" alt="${event.name}">
+        <img src="${data.image}" class="img-data rounded" alt="${data.name}">
     </div>
     <div class="col-xs-12 col-md-6">
         <table class="table table-striped datatable table-hover rounded">
@@ -24,43 +27,48 @@ div.innerHTML = `
             <tbody>
                 <tr>
                     <th scope="row">Name</th>
-                    <td>${event.name}</td>
+                    <td>${data.name}</td>
                 </tr>
                 <tr>
                     <th scope="row">Date</th>
-                    <td>${event.date}</td>
+                    <td>${data.date}</td>
                 </tr>
                 <tr>
                     <th scope="row">Description</th>
-                    <td>${event.description}</td>
+                    <td>${data.description}</td>
                 </tr>
                 <tr>
                     <th scope="row">Category</th>
-                    <td>${event.category}</td>
+                    <td>${data.category}</td>
                 </tr>
                 <tr>
                     <th scope="row">Place</th>
-                    <td>${event.place}</td>
+                    <td>${data.place}</td>
                 </tr>
                 <tr>
                     <th scope="row">Capacity</th>
-                    <td>${event.capacity}</td>
+                    <td>${data.capacity}</td>
                 </tr>
                 <tr>
                     <th scope="row">Assistance or Estimate</th>
-                    <td>${event.assistance == undefined ? event.estimate : event.assistance}</td>
+                    <td>${data.assistance == undefined ? data.estimate : data.assistance}</td>
                 </tr>
                 <tr>
                     <th scope="row">Price</th>
-                    <td>$${event.price}.-</td>
+                    <td>$${data.price}.-</td>
                 </tr>
             </tbody>
             <tfoot>
                 <th scope="col" colspan="2" class="text-center">
-                <a href="../index.html" class="btn nav-link" >go back</a></th>
+                <a href="javascript:history.back()" class="btn nav-link" >go back</a></th>
             </tfoot>
         </table>
     </div>
 </div>
 `
+}
+
+start()
+
+
 

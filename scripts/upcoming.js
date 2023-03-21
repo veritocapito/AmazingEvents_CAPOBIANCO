@@ -1,5 +1,5 @@
 
-import { createCards, searchFuture, createCheckbox, inputFilter, categoryFilter } from "./functions.js";
+import { requestData, createCards, searchFuture, createCheckbox, inputFilter, categoryFilter } from "./functions.js";
 
 
 const futureEventsContainer = document.getElementById('cards-next');
@@ -12,22 +12,9 @@ searchInput.addEventListener('input', superFilter);
 
 searchContainer.addEventListener('change', superFilter);
 
-
-async function requestCards(){
-    let data = await fetch("../assets/amazing.json")
-                    .then(response => response.json())
-                    .then(data => {
-                        return data;
-                    })
-                    .catch((error) => console.log(error));
-                    console.log(data)
-    return data;
-
-}
-
-const data = await requestCards();
+const data = await requestData();
 function start(){
-    createCards(searchPast(data), futureEventsContainer);
+    createCards(searchFuture(data), futureEventsContainer);
     createCheckbox(data.events, catContainer);
 }
 
