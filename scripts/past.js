@@ -12,16 +12,16 @@ searchInput.addEventListener('input', superFilter);
 
 searchContainer.addEventListener('change', superFilter);
 
-const data = await requestData();
+const {currentDate, events} = await requestData();
 function start(){
-    createCards(searchPast(data), pastEventContainer);
-    createCheckbox(data.events, catContainer);
+    createCards(searchPast(events, currentDate), pastEventContainer);
+    createCheckbox(events, catContainer);
 }
 
 start()
 
 function superFilter(){
-    let firstFilter = inputFilter(searchPast(data), searchInput.value);
+    let firstFilter = inputFilter(searchPast(events), searchInput.value);
     let secondFilter = categoryFilter(firstFilter);
     createCards(secondFilter, pastEventContainer);
 }

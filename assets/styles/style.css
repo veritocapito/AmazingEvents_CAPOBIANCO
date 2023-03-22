@@ -106,6 +106,7 @@ a .bi:hover{
     flex-direction: column;
     min-height: 76vh;
     gap: 1rem;
+    padding: 2rem;
 }
 
 .table {
@@ -148,6 +149,10 @@ a .bi:hover{
 
 th.title{
     background-color:rgb(239, 131, 184) ;
+}
+
+.myTable td{
+    width: 33%;
 }
 
 footer{

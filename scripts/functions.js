@@ -72,15 +72,15 @@ export function categoryFilter(array){
     return array;
 }
 
-export function searchFuture(myData){
+export function searchFuture(myData, date){
     let nextEventAux = [];
-    nextEventAux = myData.events.filter( item => Date.parse(item.date) > Date.parse(myData.currentDate));
+    nextEventAux = myData.filter( item => Date.parse(item.date) > Date.parse(date));
     return nextEventAux;
 }
 
-export function searchPast(myData){
+export function searchPast(myData, date){
     let pastEventAux = [];
-    pastEventAux = myData.events.filter( item => Date.parse(item.date) < Date.parse(myData.currentDate));
+    pastEventAux = myData.filter( item => Date.parse(item.date) < Date.parse(date));
     return pastEventAux;
 }
 
