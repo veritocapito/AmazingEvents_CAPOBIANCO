@@ -13,6 +13,7 @@ searchInput.addEventListener('input', superFilter);
 searchContainer.addEventListener('change', superFilter);
 
 const {currentDate, events} = await requestData();
+//ejecuta las funciones para pintar las tarjetas de eventos pasados en un contenedor
 function start(){
     createCards(searchPast(events, currentDate), pastEventContainer);
     createCheckbox(events, catContainer);
@@ -20,8 +21,9 @@ function start(){
 
 start()
 
+//ejecuta el filtro combinado por input y por chechbox
 function superFilter(){
-    let firstFilter = inputFilter(searchPast(events), searchInput.value);
+    let firstFilter = inputFilter(searchPast(events, currentDate), searchInput.value);
     let secondFilter = categoryFilter(firstFilter);
     createCards(secondFilter, pastEventContainer);
 }

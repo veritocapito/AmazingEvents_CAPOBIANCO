@@ -8,10 +8,10 @@ const searchContainer = document.getElementById('navbarSearchDropdown');
 
 
 searchInput.addEventListener('input', superFilter);
-
 searchContainer.addEventListener('change', superFilter);
 
 
+//realiza la peticion asincrona para poder trabajar con los datos del json
 async function requestCards(){
     let data = await fetch("./assets/amazing.json")
                     .then(response => response.json())
@@ -25,6 +25,7 @@ async function requestCards(){
 }
 
 const data = await requestCards();
+//ejecuta las funciones para pintar las tarjetas en un contenedor
 function start(){
     createCards(data.events, eventsHome);
     createCheckbox(data.events, catContainer);
@@ -32,7 +33,7 @@ function start(){
 
 start()
 
-
+//ejecuta el filtro combinado por input y por chechbox
 function superFilter(){
     let firstFilter = inputFilter(data.events, searchInput.value);
     let secondFilter = categoryFilter(firstFilter);
