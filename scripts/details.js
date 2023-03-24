@@ -1,6 +1,7 @@
-import data from "./amazing.js";
 
-console.log(document);
+import { requestData } from "./functions.js";
+
+const {events} = await requestData();
 
 const queryString = location.search;
 const params = new URLSearchParams(queryString);
@@ -57,7 +58,7 @@ div.innerHTML = `
             </tbody>
             <tfoot>
                 <th scope="col" colspan="2" class="text-center">
-                <a href="javascript:history.back()" class="btn nav-link" >go back</a></th>
+                <a href="../index.html" class="btn nav-link" >go back</a></th>
             </tfoot>
         </table>
     </div>
