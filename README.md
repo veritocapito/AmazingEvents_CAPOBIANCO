@@ -8,7 +8,7 @@ This project was developed between February 2023 and March 2023, as a result of 
 
 ## Technologies: :eight_pointed_black_star:
 
-HTML - CSS - Boostrap - Javascript - Vue
+HTML - CSS - Boostrap - Javascript
 
 
 ## Aditional Information  :white_check_mark:
