@@ -41,7 +41,7 @@ main{
 }
 
 .home{
-    max-width: 80vw;
+    max-width: 90vw;
 }
 
 .card{
@@ -205,4 +205,16 @@ footer{
     background-repeat: no-repeat; 
     background-size: cover;
     font-family: 'Michroma', sans-serif;
+}
+
+@media screen and (max-width : 480px) {
+    .form-search{
+        flex-direction: column;
+        justify-items: center;
+    }
+
+    .input-search{
+        width: 50%;
+        align-self: center !important;
+    }
 }
