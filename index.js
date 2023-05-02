@@ -1,4 +1,4 @@
-import { createCards, createCheckbox, inputFilter, categoryFilter } from "./scripts/functions.js";
+import { createCheckbox, inputFilter, categoryFilter } from "./scripts/functions.js";
 
 
 const eventsHome = document.getElementById('cards-home');
@@ -40,3 +40,30 @@ function superFilter(){
     createCards(secondFilter, eventsHome);
 }
 
+//dado un array pinta las cartas en un contenedor
+function createCards(array, container) {
+    container.innerHTML = '';
+    if (array.length == 0){
+        container.innerHTML = `<p class="display-6 fw-bolder" style="padding: 2rem; height: 54vh">No matches found, try again!</p>`
+        return;
+    }
+    let fragmento = document.createDocumentFragment();
+    for (let item of array){
+        let div = document.createElement('div');
+        div.className='card m-3';
+        div.style='width: 18rem; height: 25rem; gap: 0.5rem;';
+        div.innerHTML=`        
+            <img src="${item.image}" class="card-img-top p-1 card-img" alt="card-image">
+            <div class="card-body">
+                <h5 class="card-title">${item.name}</h5>
+                <p class="card-text">${item.description}</p>
+            </div>
+            <div class="card-footer d-flex gap-3">
+                <p class="card-text mt-2 pt-1">Price $${item.price}.-</p>
+                <a href="./pages/details.html?id=${item._id}" class="btn btn-book pt-2">More Info</a>
+            </div>
+        `;
+        fragmento.appendChild(div);
+    }    
+    container.appendChild(fragmento);
+}
